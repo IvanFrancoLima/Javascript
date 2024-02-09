@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multa de Transito</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: aquamarine;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main{
+            max-width: 500px;
+            height: 300px;
+            border-radius: 5px;
+            padding: 1em;
+            background-color: white;
+        }
+
+        main h1{
+            margin-bottom: 1em;
+        }
+
+        input[type='button']{
+            margin-top: 2em;
+            padding: 1em;
+            width: 100%;
+            display: block;
+        }
+
+        p{
+            display: inline;
+            margin-top: 2em;
+        }
+
+        @media screen and (max-width: 370px) {
+            h1{
+                font-size: 20px;
+            }
+
+            label{
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Estrangeiro ou Brasileiro</h1>
+        <form action="nacionalidade.php" method="get">
+            <label for="foreign">País:</label>
+            <input type="text" name="foreign_" id="foreign" maxlength="10" required>
+            <input type="button" value="Analise" onclick="verificar()">
+        </form>
+        <p id="resposta">Nacionalidade:</p>
+    </main>
+
+    <script>
+        function verificar(){
+            var resposta = window.document.querySelector('p#resposta')
+            var lugar = window.document.querySelector('input#foreign')
+            
+            if (lugar.value == "Brasil"){
+                resposta.innerHTML = `<p>Brasileiro</p>` 
+            }else{
+                resposta.innerHTML = `<p>Estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
