@@ -13,11 +13,25 @@
 </head>
 <body>
     <h1>DOM</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p>Aqui vai o <strong>resultado</strong></p>
     <p>Reforçando o conceito de <strong>DOM</strong></p>
-    <div>Clique em Mim</div>
+    <div id="clique">Clique em Mim</div>
     <script>
+        //Seletores por "Tag Name" e "QuerySelector"
+        var p = window.document.getElementsByTagName('p')[0]
+        var clique = window.document.querySelector('div#clique')
+        
 
+        window.document.write('Esse aqui é meu parágrafo: ' + p.innerText + '<br>')
+        window.document.writeln('Esse está com a formatação: ' + p.innerHTML)
+
+        //Modificação da Variável com seletor Querie
+        clique.innerText = 'Olá'
+        clique.style.background='green'
+
+        //Modificação da Variável com seletor Tag Name
+        p.style.color='black'
+        p.style.fontSize='1.4em'
     </script>
 </body>
 </html>
