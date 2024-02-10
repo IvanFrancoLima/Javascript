@@ -20,4 +20,8 @@ switch (dia){
         break
     case 7:
         console.log(`Hoje é Domingo`)
+        break
+    default:
+        console.log('Dia inválido')
+        break
 }
