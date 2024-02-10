@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <main>
+        <p id="hora">Agora são horas</p>
+        <div id="imagem">
+        </div>
+    </main>
+    <script>
+        var fundo = window.document.body
+        var msg = window.document.querySelector('#hora')
+        var img = window.document.querySelector('#imagem')
+
+        fundo.style.backgroundColor=`url(--noite)`
+    </script>
+</body>
+</html>
