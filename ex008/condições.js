@@ -1,4 +1,4 @@
-var idade = require
+var idade = 64
 
 if(idade<16){
     console.log('Não pode votar')
