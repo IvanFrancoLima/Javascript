@@ -58,34 +58,27 @@ main p{
 
     main p{
         padding-top: 2em;
-    }
-
-    #imagem{
-        transform: translate(0%,20%);
-        height: 250px;
-        width: 250px;
-    }
-}
-
-@media screen and (max-width:370px) {
-    h1{
-        padding: 5px 0;
-        font-size: 1.5em;
-    }
-    
-    main{
-        width: 95vw;
-        height: 85vh;
-    }
-
-    main p{
-        padding-top: 1em;
+        font-size: 1em;
     }
 
     #imagem{
         transform: translate(0%,10%);
         height: 250px;
         width: 250px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    main{
+        top: 55%;
+        width: 80vw;
+        height: 80vh;
+    }
+
+    #imagem{
+        transform: translate(0%,20%);
+        height: 200px;
+        width: 200px;
     }
 }
 
