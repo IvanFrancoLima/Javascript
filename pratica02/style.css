@@ -25,7 +25,7 @@ main{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 600px;
-    height: 600px;
+    height: 500px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
     padding: 1em;
@@ -44,7 +44,7 @@ main p{
 
 #imagem{
     margin: 1em auto;
-    background: black url(imagens/dia.jpg) no-repeat center/cover fixed;
+    background: black;
     height: 250px;
     width: 250px;
     border-radius: 50%;
@@ -62,6 +62,28 @@ main p{
 
     #imagem{
         transform: translate(0%,20%);
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    h1{
+        padding: 5px 0;
+        font-size: 1.5em;
+    }
+    
+    main{
+        width: 95vw;
+        height: 85vh;
+    }
+
+    main p{
+        padding-top: 1em;
+    }
+
+    #imagem{
+        transform: translate(0%,10%);
         height: 250px;
         width: 250px;
     }
