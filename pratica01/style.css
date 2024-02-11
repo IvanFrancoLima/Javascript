@@ -52,3 +52,20 @@ main p{
     border-radius: 50%;
 }
 
+@media screen and (max-width:640px) {
+    main{
+        width: 80vw;
+        height: 80vh;
+    }
+
+    main p{
+        padding-top: 2em;
+    }
+
+    #imagem{
+        transform: translate(0%,20%);
+        height: 250px;
+        width: 250px;
+    }
+}
+
