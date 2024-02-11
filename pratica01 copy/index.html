@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <main>
+        <p id="hora">Agora são horas</p>
+        <div id="imagem">
+        </div>
+    </main>
+    <script>
+        var fundo = window.document.getElementsByTagName('body')[0]
+        var msg = window.document.querySelector('#hora')
+        var img = window.document.querySelector('#imagem')
+        var hora = new Date().getHours()
+
+        msg.innerText=`Agora são ${hora} horas`
+
+        if(hora>12 && hora<18){
+            fundo.style.backgroundColor='rgb(230, 47, 47)'
+            img.style.background='black url(imagens/tarde.jpg) no-repeat center/cover fixed'
+        } else if (hora>18 && hora<23){
+            fundo.style.backgroundColor='rgb(41, 71, 241)'
+            img.style.background='black url(imagens/noite.jpg) no-repeat center/cover fixed'
+        }
+    </script>
+</body>
+</html>
