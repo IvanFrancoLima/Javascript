@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-:root{
-    --manha:#e9af1c;
-    --tarde:rgb(230, 47, 47);
-    --noite:rgb(41, 71, 241);
-    --madruga:rgba(128, 128, 128, 0.678);
-}
-
 *{
     margin: 0px;
     padding: 0px;
@@ -15,7 +8,7 @@
 }
 
 body{
-    background-color: var(--manha);
+    background-color: lightskyblue;
     height: 100vh;
     width: 100vw;
 }
@@ -32,10 +25,15 @@ main{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 600px;
-    height: 400px;
+    height: 600px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
+    padding: 1em;
     background-color: white;
+}
+
+main input[type=button]{
+    padding: 10px 15px;
 }
 
 main p{
@@ -47,8 +45,8 @@ main p{
 #imagem{
     margin: 1em auto;
     background: black url(imagens/dia.jpg) no-repeat center/cover fixed;
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
 }
 

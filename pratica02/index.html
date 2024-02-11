@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Verificador de Idade</h1>
+    <main>
+        <form action="idade.php" method="get">
+            <label for="nasc">Data de Nascimento:</label>
+            <input type="date" name="nasc_" id="nasc" required>
+            <fieldset style="border: none; padding: 1em 0;">
+                <label for="sex">Sexo:</label>
+                <input type="radio" id="sex_mascu" name="sex_" checked>
+                <label for="sex_mascu">Masculino</label>
+                <input type="radio" id="sex_fem" name="sex_">
+                <label for="sex_fem">Feminino</label>
+            </fieldset>
+            <input type="button" value="Verificar" onclick="verficar()">
+        </form>
+        <div id="imagem">
+        </div>
+    </main>
+    <script>
+        
+    </script>
+</body>
+</html>
