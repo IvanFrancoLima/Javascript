@@ -48,13 +48,13 @@
     <h1>Contagem</h1>
     <main>
         <section id="formulario">
-            <form action="contagem" method="get">
+            <form action="contagem.php" method="get">
                 <label for="num1">Primeiro:</label>
                 <input type="number" name="num1_" id="num1" min="1" max="300"  maxlength="3">
                 <br>
 
                 <label for="num2">Segundo:</label>
-                <input type="number" name="num2_" id="num2" min="1" max="300" maxlength="3">
+                <input type="number" name="num2_" id="num2" min="1" max="300" maxlength="3" value="5">
                 <br>
 
                 <label for="passo">Passo:</label>
@@ -62,20 +62,52 @@
 
                 <input type="button" value="Contagem" id="contagem">
             </form>
-            <p id="msg">Contagem...</p>
+            <p id="msg">Contagem: <span id="emoji"></span></p>
         </section>
     </main>
 
     <script>
         var msg = window.document.querySelector('p#msg')
         var contagem = window.document.querySelector('input#contagem')
+        
 
         contagem.addEventListener('click',contar)
 
         function contar(){
-            var num = window.document.getElementById('input#num1')
-            var num2 = window.document.querySelector('input#num2')
-            window.alert(`Menor para o maior ${num1}`)
+            //Variáveis de Numbers e Passo.
+            var num1= Number(window.document.querySelector('input#num1').value)
+            var num2 = Number(window.document.querySelector('input#num2').value)
+            var passo = Number(window.document.querySelector('input#passo').value)
+
+            if(num1 == 0 || num2 == 0 || passo == 0){
+                window.alert('Impossível contar')
+            }else{
+                msg.innerHTML='Contagem: '
+
+                //Condicionais de Ordem de Contagem
+                if(num1<num2){
+                    //Contagem crescente
+                    while(num1<=num2){
+                        if(num1<num2){
+                            msg.innerText+=` ${num1} 👉`
+                        }
+                        else{
+                            msg.innerText+=` ${num1} \u{1F3C1}`
+                        }
+                        num1 += passo
+                    }
+                }else{
+                    //Contagem regressiva
+                    while(num2<=num1){
+                        if(num2<1){
+                            msg.innerHTML+=` ${num1} 👉`
+                        }else{
+                            msg.innerHTML+=` ${num1} 🏳️`
+                        }
+                        num1 -= passo
+                    }
+                }
+            }
         }
     </script>
 </body>
