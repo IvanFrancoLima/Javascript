@@ -4,8 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estrutura For</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: rgb(0, 195, 255);
+        }
+
+        h1{
+            color: white;
+            text-align: center;
+        }
+
+
+        main{
+            margin: auto;
+            width: 500px;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.281);
+            background-color: white;
+        }
+
+        main input[type="number"]{
+            width: 80%;
+            margin: 10px 0;
+        }
+
+        main input[type="button"]{
+            width: 20%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <h1>Contagem</h1>
+    <main>
+        <section id="formulario">
+            <form action="contagem" method="get">
+                <label for="num1">Primeiro:</label>
+                <input type="number" name="num1_" id="num1" min="1" max="300"  maxlength="3">
+                <br>
+
+                <label for="num2">Segundo:</label>
+                <input type="number" name="num2_" id="num2" min="1" max="300" maxlength="3">
+                <br>
+
+                <label for="passo">Passo:</label>
+                <input type="number" name="passo_" id="passo" max="300" maxlength="3">
+
+                <input type="button" value="Contagem" id="contagem">
+            </form>
+            <p id="msg">Contagem...</p>
+        </section>
+    </main>
+
+    <script>
+        var msg = window.document.querySelector('p#msg')
+        var contagem = window.document.querySelector('input#contagem')
+
+        contagem.addEventListener('click',contar)
+
+        function contar(){
+            var num = window.document.getElementById('input#num1')
+            var num2 = window.document.querySelector('input#num2')
+            window.alert(`Menor para o maior ${num1}`)
+        }
+    </script>
 </body>
 </html>
