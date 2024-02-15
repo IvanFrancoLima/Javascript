@@ -23,3 +23,12 @@ main{
     background-color: white;
     border-radius: 5px;
 }
+
+main p{
+    margin: 1em 0;
+}
+
+#vetor{
+    margin: 1em 0;
+    width: 250px;
+}

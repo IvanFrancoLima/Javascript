@@ -5,8 +5,8 @@ for(let pos = 0;pos<vetor.length;pos++){
     console.log(vetor[pos])
 }
 
-if (vetor.indexOf(8) == -1){
+if (vetor.indexOf(23) == -1){
     console.log('Valor não encontrado')
 }else{
-    console.log(`O valor 8 está posição ${vetor.indexOf(8)}`)
+    console.log(`O valor 8 está posição ${vetor.indexOf(25)}`)
 }
