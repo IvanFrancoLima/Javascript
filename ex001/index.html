@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Exercício</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-flow: wrap row;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+
+        main{
+            height: 300px;
+            width: 600px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.438);
+            background-color: white;
+            
+        }
+
+        main h1{
+            text-align: center;
+            color: black;
+        }
+
+        p{
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Primeiro Exércicio</h1>
+        <p id="mensagem">Olá, mundo!</p>
+    </main>
+    <script>
+        window.alert('Minha primeira mensagem');
+        window.confirm('Está gostando de Javascript?');
+        window.prompt('Qual o seu nome?')
+        window.document.body.style.background="aqua";
+    </script>
+</body>
+</html>
