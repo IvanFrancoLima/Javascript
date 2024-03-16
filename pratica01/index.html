@@ -74,15 +74,15 @@
         if(hora>12 && hora<18){
             fundo.style.background='Yellow'
             foto.style.background=`black url(imagens/tarde.jpg) no-repeat center/cover fixed`
-            mensagem.innerHTML=`Agora são ${hora.toFixed(2).replace('.',':')} da tarde`
+            mensagem.innerHTML=`Agora são ${hora} da tarde`
         }else if(hora>18){
             fundo.style.background=`blue`
             foto.style.background=`black url(imagens/noite.jpg) no-repeat center/cover fixed`
-            mensagem.innerHTML=`Agora são ${hora.toFixed(2).replace('.',':')} da noite`
+            mensagem.innerHTML=`Agora são ${hora} da noite`
         }else if(hora<=4){
             fundo.style.background=`gray`
             foto.style.background=`black url(imagens/noite.jpg) no-repeat center/cover fixed`
-            mensagem.innerHTML=`Agora são ${hora.toFixed(2).replace('.',':')} da madrugada`
+            mensagem.innerHTML=`Agora são ${hora} da madrugada`
         }
     </script>
 </body>
