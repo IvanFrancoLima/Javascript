@@ -43,12 +43,12 @@
 <body>
     <main>
         <h1>Seu nome</h1>
-
+        <p id="nome">Seu nome aparecerá aqui</p>
     </main>
     <script>
-        var num = Number.parseInt(window.prompt('Digite um número: '))
-        var num2 = Number.parseInt(window.prompt('Digite outro número: '))
-        window.alert(`A soma entre ${num} + ${num2} é ${num+num2} `)
+        var nome = window.prompt('Qual o seu nome?')
+        var msg = window.document.querySelector('#nome')
+        msg.innerHTML=`O seu nome tem ${nome.length} letras`
     </script>
 </body>
 </html>
