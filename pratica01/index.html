@@ -68,21 +68,21 @@
         var foto = window.document.querySelector('#foto')
 
         //Mensagem informando as horas
-        mensagem.innerHTML=`Agora são exatamente ${hora} da manhã`
+        mensagem.innerHTML=`Agora são ${hora} da manhã`
 
         //Condições de hora para modificar o css do site
         if(hora>12 && hora<18){
             fundo.style.background='Yellow'
             foto.style.background=`black url(imagens/tarde.jpg) no-repeat center/cover fixed`
-            mensagem.innerHTML=`Agora são exatamente ${hora.toFixed(2).replace('.',':')} da tarde`
+            mensagem.innerHTML=`Agora são ${hora.toFixed(2).replace('.',':')} da tarde`
         }else if(hora>18){
             fundo.style.background=`blue`
             foto.style.background=`black url(imagens/noite.jpg) no-repeat center/cover fixed`
-            mensagem.innerHTML=`Agora são exatamente ${hora.toFixed(2).replace('.',':')} da noite`
+            mensagem.innerHTML=`Agora são ${hora.toFixed(2).replace('.',':')} da noite`
         }else if(hora<=4){
             fundo.style.background=`gray`
             foto.style.background=`black url(imagens/noite.jpg) no-repeat center/cover fixed`
-            mensagem.innerHTML=`Agora são exatamente ${hora.toFixed(2).replace('.',':')} da madrugada`
+            mensagem.innerHTML=`Agora são ${hora.toFixed(2).replace('.',':')} da madrugada`
         }
     </script>
 </body>
