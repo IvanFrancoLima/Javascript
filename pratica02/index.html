@@ -46,8 +46,31 @@
                 ano -= idade //idade do usuário
                 if(sexo[0].checked){   //Se for Homem
                     if(ano<=10){
-                        imagem.style.background='black url(imagens/menino.jpeg) no-repeat center top/contain scroll'
+                        imagem.style.background='black url(imagens/menino.jpeg) no-repeat center top/contain'
                         mensagem.innerHTML=`Parabéns você é um menino de <strong>${ano}</strong> anos de idade` 
+                    }else if(ano<=20){
+                        imagem.style.background='black url(imagens/adolescente.jpeg) no-repeat center top/contain'
+                        mensagem.innerHTML=`Parabéns você é um jovem de <strong>${ano}</strong> anos de idade`
+                    }else if(ano<=50){
+                        imagem.style.background='black url(imagens/adulto.jpeg) no-repeat center top/contain'
+                        mensagem.innerHTML=`Parabéns você é um adulto de <strong>${ano}</strong> anos de idade`
+                    }else{
+                        imagem.style.background='black url(imagens/senhor.jpeg) no-repeat center top/contain'
+                        mensagem.innerHTML=`Parabéns você é um senhor de <strong>${ano}</strong> anos de idade`
+                    }
+                }else{ //Caso seja uma mulher
+                    if(ano<=10){
+                        imagem.style.background='black url(imagens/menina.jpeg) no-repeat center top/contain'
+                        mensagem.innerHTML=`Parabéns você é uma menina de <strong>${ano}</strong> anos de idade` 
+                    }else if(ano<=20){
+                        imagem.style.background='black url(imagens/adolescentemulher.jpeg) no-repeat center top/contain'
+                        mensagem.innerHTML=`Parabéns você é uma jovem de <strong>${ano}</strong> anos de idade`
+                    }else if(ano<=50){
+                        imagem.style.background='black url(imagens/adulta.jpeg) no-repeat center left/contain'
+                        mensagem.innerHTML=`Parabéns você é uma adulta de <strong>${ano}</strong> anos de idade`
+                    }else{
+                        imagem.style.background='black url(imagens/senhora.jpeg) no-repeat center top/contain'
+                        mensagem.innerHTML=`Parabéns você é uma senhora de <strong>${ano}</strong> anos de idade`
                     }
                 }        
             }
