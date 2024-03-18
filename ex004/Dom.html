@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arvóre DOM</h1>
+    <p>Aprendendo a usar o DOM</p>
+    <p id="cor">Java-script, Python, Java, C</p>
+    <div>
+        
+    </div>
+    <script>
+        var fundo = window.document.body
+        var msg = window.document.getElementsByTagName('p')[0]
+        var msg2= window.document.querySelector('#cor')
+
+        msg2.style.color='tomato'
+        fundo.style.backgroundColor = 'aqua'
+        msg.style.color = 'white'
+        window.document.write(msg.innerHTML)
+    </script>
+
+</body>
+</html>
