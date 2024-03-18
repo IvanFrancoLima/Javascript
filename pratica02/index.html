@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Exercício</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            align-items: center;
+            background-color: aquamarine;
+        }
+
+        h1{
+            padding: 10px 0;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
+        main{
+            margin: auto;
+            width: 600px;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.438);
+            background-color: white;
+        }
+
+        legend{
+            display: inline;
+        }
+
+        input[type=button]{
+            display: block;
+            margin: 1em 0;
+            padding: 10px;
+        }
+
+        p{
+            padding: 10px 0;
+        }
+
+        #imagem{
+            margin: auto;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de Idade</h1>
+    <main>
+        <form action="" method="get">
+            <p>
+                <label for="idade">Ano de Nascimento: </label>
+                <input type="number" name="idade_" id="idade">
+            </p>
+
+            <p>
+                Sexo:
+                <input type="radio" name="sexo" id="mas">
+                <label for="sexo_masc">Masculino </label>
+                <input type="radio" name="sexo" id="femi">
+                <label for="sexo_femi">Feminino</label>
+            </p>
+
+            <input type="button" value="Verificar" onclick="verificar()">
+        </form>
+        <section id="imagem">
+
+        </section>
+    </main>
+    <script>
+        var ano = window.document.querySelector('#idade')
+        var sexo = window.document.getElementsByName('sexo')
+        var imagem = window.document.querySelector('#imagem')
+
+        function verificar(){
+            
+        }
+    </script>
+</body>
+</html>
