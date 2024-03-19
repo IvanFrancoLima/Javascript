@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            font-size: 1.5em;
+            background-color: greenyellow;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="quadro">
+        <p id="clique">Interaja</p>
+    </div>
+    <script>
+        var quadrado = window.document.querySelector('#quadro')
+        var msg = window.document.querySelector('#clique')
+
+        quadrado.addEventListener('mouseenter',entrou)
+        quadrado.addEventListener('mouseleave',saiu)
+        quadrado.addEventListener('click',clicou)
+        msg.addEventListener('click',clicando)
+
+        function entrou(){
+            quadrado.style.background = 'blue'
+        }
+
+        function saiu(){
+            quadrado.style.background = 'greenyellow'
+        }
+
+        function clicou(){
+            quadrado.style.background = 'aqua'
+        }
+
+        function clicando(){
+            msg.innerHTML='MAMASTE?'
+            msg.style.color='black'
+        }
+    </script>
+</body>
+</html>
