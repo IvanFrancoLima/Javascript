@@ -26,7 +26,7 @@ h1{
 
 main{
     margin: auto;
-    width: 600px;
+    width: 300px;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.438);
@@ -50,8 +50,8 @@ p{
 #imagem{
     margin: auto;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background-color: black;
 }
 
