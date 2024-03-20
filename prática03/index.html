@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Exercício</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/style.telas.css" media="(min-width:1000px)"> 
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <main>
+        <form action="" method="get">
+            <p>
+                <label for="inicio">Ínicio: </label>
+                <input type="number" name="inicio_" id="inicio" autofocus>
+            </p>
+            <p>
+                <label for="fim">Fim: </label>
+                <input type="number" name="fim_" id="fim">
+            </p>
+            <p>
+                <label for="passo">Passo: </label>
+                <input type="number" name="passo_" id="passo">
+            </p>
+
+            <input type="button" value="Começar" id="calcular">
+        </form>
+        <p id="msg">Preparando contagem: </p>
+    </main>
+    <script>
+        var botao = window.document.querySelector('#calcular') //Botão para iniciar o cálculo
+        
+        botao.addEventListener('click',seq) //Definindo o evento DOM
+
+        function seq(){
+            //Variáveis
+            let inicio = Number(window.document.querySelector('#inicio').value)
+            let fim = Number(window.document.querySelector('#fim').value)
+            let passo = Number(window.document.querySelector('#passo').value)
+            let msg = window.document.querySelector('#msg')
+            //==//
+
+            //Se o usuário inserir valores irregulares
+            if(inicio == 0 || fim == 0 || passo == 0){
+                window.alert('Você não preencheu todos os campos da forma correta')
+            }else{//Caso o usuário inserir valores normais
+                msg.innerHTML = 'Contando: '
+
+                if(inicio<fim){//Ordem crescente
+                    for(inicio;inicio<=fim;inicio+=passo){
+                        if(inicio != fim){
+                            msg.innerHTML += ` ${inicio} \u{1F603}`
+                        }else{
+                            msg.innerHTML += ` ${inicio} \u{1F3C1}`
+                        }
+                    }
+                }else{
+                    for(inicio;inicio>=fim;inicio-=passo){//Ordem decrescente
+                        if(inicio-passo<fim){
+                            msg.innerHTML += ` ${inicio} \u{1F3C1}`
+                        }else{
+                            msg.innerHTML += ` ${inicio} \u{1F603}`
+                        }
+                    } 
+                }    
+            }
+        }
+    </script>
+</body>
+</html>
