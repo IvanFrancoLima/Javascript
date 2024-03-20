@@ -69,10 +69,12 @@
 
     <script>
         function verificar(){
-            var resposta = window.document.querySelector('p#resposta')
-            var lugar = window.document.querySelector('input#foreign')
-            
-            if (lugar.value == "Brasil"){
+            var resposta = window.document.querySelector('#resposta')
+            var lugar = window.document.querySelector('#foreign').value
+
+            lugar = lugar.toUpperCase()
+
+            if (lugar == "BRASIL"){
                 resposta.innerHTML = `<p>Brasileiro</p>` 
             }else{
                 resposta.innerHTML = `<p>Estrangeiro</p>`
