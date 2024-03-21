@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Exercício</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/style.telas.css" media="(min-width:1000px)"> 
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <main>
+        <form action="" method="get">
+            <label for="tabuada">Digite um número</label>
+            <input type="number" name="tabuada" id="tabuada" autofocus min="0">
+            <input type="button" value="Gerar Tabuada" id="gerar_tabuada">
+            <br>
+            <br>
+            <select name="gertabuada" id="gertabuada" style="width: 150px;" size="10">
+                <option value="">Digite um número acima</option>
+            </select>
+        </form>
+    </main>
+    <script>
+        var função = window.document.querySelector('#gerar_tabuada') //Variável do botão de input
+        var tabu = window.document.querySelector('#gertabuada') //Variável do input select
+
+        função.addEventListener('click',gerar) //Criando a função da tabuada
+
+        function gerar(){ //Ínicio da função de gerar a tabuada
+
+            let num = Number(window.document.querySelector('#tabuada').value) //Varíavel que recebe o número
+
+            if(num=='' || num==0){ //Verificando valores inseridos
+              window.alert('Insira valores válidos')  
+            }else{
+                tabu.innerHTML='' //Limpando a tabela
+
+                for(var cont=1;cont<=10;cont++){
+                    item = window.document.createElement('option') //Criando a tag option
+
+                    item.text=`${num} x ${cont} = ${num*cont}`
+
+                    item.value=`Tab ${cont}` //Adicionando valores a cada item exibido
+
+                    tabu.appendChild(item) //Tornando a tag option criada filha da variável item
+                }
+            }
+        }
+    </script>
+</body>
+</html>
